@@ -13,11 +13,16 @@ export default function Plate({
             </div>
 
             <div className='flex flex-row'>
-                {basicColors.map((color) => {
+                {basicColors.map((color, index) => {
                     return (
                         <div
-                            className={'w-4 h-4 border ' + color}
-                            onClick={() => setColor(color)}></div>
+                            className={
+                                'w-8 h-8 border flex items-center justify-center cursor-pointer  ' +
+                                color
+                            }
+                            onClick={() => setColor(color)}>
+                            {index}
+                        </div>
                     )
                 })}
             </div>
